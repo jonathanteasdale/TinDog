@@ -174,3 +174,16 @@ p {
 .footer-icon {
   margin: 20px 10px;
 }
+
+/* JavaScript animations */
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.5s;
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0);
+}
