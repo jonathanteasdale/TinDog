@@ -1,3 +1,21 @@
+const the_animation = document.querySelectorAll('.animation')
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-animations')
+        }
+            else {
+                entry.target.classList.remove('scroll-animation')
+            }
+
+    })
+},
+
+
+
+/*
+
 window.addEventListener('scroll', function() {
   var content = document.querySelector('.slide-in');
   var contentPosition = content.getBoundingClientRect().top;
@@ -10,7 +28,10 @@ window.addEventListener('scroll', function() {
 
 
 
-/*
+
+
+
+
 const slideIn = document.querySelectorAll('.slide-in');
 
 function debounce(func, wait = 20, immediate = true) {
