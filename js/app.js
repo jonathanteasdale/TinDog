@@ -1,3 +1,25 @@
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+
+
+
+
+
+
+
+/*
 const the_animation = document.querySelectorAll('.animation')
 
 const observer = new IntersectionObserver((entries) => {
@@ -22,7 +44,7 @@ const observer = new IntersectionObserver((entries) => {
 
 
 
-/*
+
 
 window.addEventListener('scroll', function() {
   var content = document.querySelector('.slide-in');
